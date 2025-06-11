@@ -19,4 +19,4 @@
 ---
 
 *This project complies with all third-party resource licenses.*  
-*Source code is under [your license] while external assets follow their original licenses.*
+*Source code is under Kaoru-D while external assets follow their original licenses.*
