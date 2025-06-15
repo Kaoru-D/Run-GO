@@ -7,4 +7,4 @@ def create_screen_game(width,high):
     screen_game = pygame.display.set_mode(screen_size)
     pygame.display.set_caption("Runner: Jump the Obstacle")
     
-    return screen_game, screen_size
+    return screen_game
