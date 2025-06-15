@@ -13,6 +13,9 @@ class Obstacle(pygame.sprite.Sprite):
         self.image = self.images[self.type]
         self.rect = self.image.get_rect()
         
+        #create a mask for collision detection
+        self.mask = pygame.mask.from_surface(self.image)
+        
         # Initialize position
         self.rect.x = 800  # Comienza fuera de la pantalla a la derecha
         self.rect.bottom = ground_level
@@ -59,6 +62,3 @@ class Obstacle(pygame.sprite.Sprite):
         """Move the obstacle to the left"""
         self.rect.x -= self.speed
         
-        # Delete the obstacle if it goes off-screen
-        if self.rect.right < 0:
-            self.kill()

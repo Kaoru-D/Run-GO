@@ -12,9 +12,10 @@ class MySprite(pygame.sprite.Sprite):
         self.animation_speed = 0.2
         self.image = self.animation_frames[self.current_frame]
         self.rect = self.image.get_rect()
-        self.rect.topleft = (x, y)  # use the parameters to set the position of the player
+        self.rect.midbottom = (x, y)  # use the parameters to set the position of the player
         self.last_update = pygame.time.get_ticks()
         self.on_ground = False  # Attribute to check if the player is on the ground
+        self.mask = pygame.mask.from_surface(self.image)
     def load_character_images(self):
         """Load and scale character images."""
         # Obtain a liable path to the images directory
